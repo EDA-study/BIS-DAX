@@ -1,0 +1,9 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: 숫자/집계/통계 함수 
+    chapters: 
+    - file: math-agg-stats/abs.md
