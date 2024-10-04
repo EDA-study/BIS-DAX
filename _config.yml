@@ -4,13 +4,14 @@
 title: 경영정보시각화능력 Power BI DAX 완전 정복
 author: ""
 copyright: ""  # Copyright year to be placed in the footer
+only_build_toc_files: true
 
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 # Define the name of the latex output file for PDF builds
 # latex:
