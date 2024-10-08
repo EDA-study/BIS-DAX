@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ABS &#8212; 경영정보시각화능력 Power BI DAX 완전 정복</title>
+    <title>DIVIDE &#8212; 경영정보시각화능력 Power BI DAX 완전 정복</title>
   
   
   
@@ -58,12 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'math-agg-stats/abs';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'math-agg-stats/divide';</script>
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="DIVIDE" href="divide.html" />
-    <link rel="prev" title="EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복" href="../intro.html" />
+    <link rel="prev" title="ABS" href="abs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   </head>
@@ -177,8 +176,8 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">숫자/집계/통계 함수</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="divide.html">DIVIDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abs.html">ABS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">DIVIDE</a></li>
 </ul>
 
     </div>
@@ -250,7 +249,7 @@
       
       
       
-      <li><a href="https://github.com/EDA-study/BIS-DAX/issues/new?title=Issue%20on%20page%20%2Fmath-agg-stats/abs.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EDA-study/BIS-DAX/issues/new?title=Issue%20on%20page%20%2Fmath-agg-stats/divide.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="이슈 열기"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +279,7 @@
       
       
       
-      <li><a href="../_sources/math-agg-stats/abs.md" target="_blank"
+      <li><a href="../_sources/math-agg-stats/divide.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="소스 파일 다운로드"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +363,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ABS</h1>
+    <h1>DIVIDE</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,14 +392,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="abs">
-<h1>ABS<a class="headerlink" href="#abs" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="divide">
+<h1>DIVIDE<a class="headerlink" href="#divide" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><p>입력 받은 숫자의 절댓값을 반환합니다.</p></li>
+<li><p>입력 받은 숫자의 대한 나눗셈을 진행합니다.</p></li>
+<li><p>분모가 0일 경우 BLANK() 또는 사용자가 정의한 대체 결과를 반환합니다.</p></li>
 </ul>
 <section id="id1">
 <h2>문법<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ABS</span><span class="p">(</span><span class="o">&lt;</span><span class="n">숫자</span><span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DIVIDE</span><span class="p">(</span><span class="o">&lt;</span><span class="n">분자</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">분모</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[,</span><span class="o">&lt;</span><span class="n">대체</span> <span class="n">결과</span><span class="o">&gt;</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
@@ -413,8 +413,14 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>숫자</p></td>
-<td><p>절댓값을 얻고자 하는 숫자, 측정값에 활용 시 상수(constant)이어야 함</p></td>
+<tr class="row-even"><td><p>분자</p></td>
+<td><p>분자, a/b 식에서 a에 해당하는 값</p></td>
+</tr>
+<tr class="row-odd"><td><p>분모</p></td>
+<td><p>분모, a/b 식에서 b에 해당하는 값</p></td>
+</tr>
+<tr class="row-even"><td><p>대체 결과</p></td>
+<td><p>(선택 사항) 분모가 0이라서 오류가 발생할 때 반환하고자 하는 값, 명시하지 않는 경우 기본값은 BLANK()</p></td>
 </tr>
 </tbody>
 </table>
@@ -423,11 +429,7 @@ document.write(`
 <section id="id3">
 <h2>반환 결과<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>&lt;숫자&gt;의 절댓값</p>
-<ul>
-<li><p>양수 또는 0</p></li>
-</ul>
-</li>
+<li><p>소수(decimal) 또는 대체 결과에 정의한 값</p></li>
 </ul>
 </section>
 <section id="id4">
@@ -436,27 +438,42 @@ document.write(`
 <div><p>아래 조건으로 &lt;판매 데이터&gt; 테이블에 측정값을 추가하시오.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>측정값 이름: [이익의_절댓값]</p></li>
+<li><p>측정값 이름: [이익률]</p></li>
 <li><p>활용 필드: &lt;판매 데이터&gt; 테이블의 [매출] 및 [비용] 필드</p></li>
-<li><p>[매출]에서 [비용]을 차감한 후 절댓값 계산</p></li>
-<li><p>사용 함수: ABS, SUM</p></li>
+<li><p>[매출]에서 [비용]을 차감한 것을 [매출]로 나눠주기, [매출]이 0인 경우 “매출 없음”이 반환 되도록 하기</p></li>
+<li><p>사용 함수: DIVIDE, SUM</p></li>
 </ul>
 <section id="id5">
 <h3>선택지<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>A.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익의_절댓값</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">(</span><span class="n">ABS</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">ABS</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익률</span> <span class="o">=</span> <span class="n">DIVIDE</span><span class="p">(</span>
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">]),</span> 
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]),</span> 
+    <span class="s2">&quot;매출 없음&quot;</span>
+ <span class="p">)</span>
 </pre></div>
 </div>
 <p>B.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익의_절댓값</span> <span class="o">=</span> <span class="n">ABS</span><span class="p">(</span><span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익률</span> <span class="o">=</span> <span class="n">DIVIDE</span><span class="p">(</span>
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]),</span>
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>C.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익의_절댓값</span> <span class="o">=</span> <span class="n">ABS</span><span class="p">(</span><span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">]</span> <span class="o">-</span> <span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익률</span> <span class="o">=</span> <span class="n">DIVIDE</span><span class="p">(</span>
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]),</span>
+    <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">]),</span>
+    <span class="s2">&quot;매출 없음&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>D.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익의_절댓값</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">])</span> <span class="o">-</span> <span class="n">ABS</span><span class="p">(</span><span class="n">SUM</span><span class="p">(</span><span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이익률</span> <span class="o">=</span> <span class="n">DIVIDE</span><span class="p">(</span>
+    <span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">]</span> <span class="o">-</span> <span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">비용</span><span class="p">],</span>
+    <span class="s1">&#39;판매 데이터&#39;</span><span class="p">[</span><span class="n">매출</span><span class="p">],</span>
+    <span class="s2">&quot;매출 없음&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -464,11 +481,11 @@ document.write(`
 <h3>정답 및 해설<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="dropdown admonition">
 <p class="admonition-title">클릭해서 정답 및 해설을 확인해보세요.</p>
-<p>정답: B</p>
-<p>A. 측정값 작성 시에는 ABS 함수에는 필드가 들어갈 수 없음. 집계된 상수만 들어갈 수 있음. 설령 필드가 들어갈 수 있다 하더라도 문제에서 제시한 ‘[매출]에서 [비용]을 차감한 후 절댓값 계산’ 조건에 부합하지 않음. 그러므로 오답</p>
-<p>B. [매출]에서 [비용]을 차감하는 것을 먼저 수행했고, 이 때 측정값에서 차감하는 과정이 잘 이뤄질 수 있도록 SUM 함수를 사용해 먼저 주어진 문맥(context)에 대해서 집계를 내려 상수가 도출되도록 하였음. 그리고 나서 ABS 함수를 잘 사용하였음. 그러므로 정답.</p>
-<p>C. SUM 함수는 필드를 인자로 입력 받음. 허나 ‘판매 데이터’[매출] - ‘판매 데이터’[비용] 식의 결과는 열(필드)이 아님. 해당 식 자체가 측정값에서 성립할 수 없는 오류가 발생하는 식임. 그에 따라 전체 식에 오류가 발생하므로 오답.</p>
-<p>D. [매출]에서 [비용]을 차감하기 전에 먼저 [비용]에 절댓값을 적용함. 수식 자체에는 에러 없으나 문제에서 요구한 조건에 부합하지 않으므로 오답.</p>
+<p>정답: C</p>
+<p>A. 문제 요구사항에 따라 [매출]에서 [비용]을 차감한 것이 분자로 와야 하는데, 현재 분모에 위치해 있음. 그러므로 오답.</p>
+<p>B. 분자와 분모에 올바른 값이 들어가긴 했지만, 분모가 0일 경우 “매출 없음”이라는 대체 결과가 나오도록 명시하지 않음. 그러므로 오답.</p>
+<p>C. 분자 및 분모에 문제에서 요구한 값이 잘 입력됨. SUM 함수를 사용해 측정값이 정의될 수 있게 상수가 반환되도록 구성함. 또한 분모가 0일 경우 “매출 없음”이 나오도록 세번째 인자를 정의함. 그러므로 정답.</p>
+<p>D. ‘판매 데이터’[매출] - ‘판매 데이터’[비용] 부분과 ‘판매 데이터’[매출] 부분이 집계 함수를 통한 상수가 반환되지 않는 식이라 측정값을 정의할 시 오류가 남. 그러므로 오답.</p>
 </div>
 </section>
 </section>
@@ -505,22 +522,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="abs.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복</p>
+        <p class="prev-next-title">ABS</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="divide.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">DIVIDE</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
