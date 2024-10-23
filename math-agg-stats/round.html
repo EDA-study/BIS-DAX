@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="ko" data-content_root="./" >
+<html lang="ko" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복 &#8212; 경영정보시각화능력 Power BI DAX 완전 정복</title>
+    <title>ROUND &#8212; 경영정보시각화능력 Power BI DAX 완전 정복</title>
   
   
   
@@ -18,51 +18,51 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=ae323b5b"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/documentation_options.js?v=ae323b5b"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="_static/translations.js?v=e33e7ba0"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=e33e7ba0"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <link rel="icon" href="_static/favicon.png"/>
-    <link rel="index" title="색인" href="genindex.html" />
-    <link rel="search" title="검색" href="search.html" />
-    <link rel="next" title="ABS" href="math-agg-stats/abs.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'math-agg-stats/round';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="prev" title="INT" href="int.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   </head>
@@ -94,7 +94,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="search.html"
+      action="../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="../intro.html">
   
   
   
@@ -170,18 +168,18 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
                     EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">숫자/집계/통계 함수</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/abs.html">ABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/divide.html">DIVIDE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/int.html">INT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/round.html">ROUND</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="abs.html">ABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="divide.html">DIVIDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">INT</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ROUND</a></li>
 </ul>
 
     </div>
@@ -253,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/EDA-study/BIS-DAX/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EDA-study/BIS-DAX/issues/new?title=Issue%20on%20page%20%2Fmath-agg-stats/round.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="이슈 열기"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +281,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="../_sources/math-agg-stats/round.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="소스 파일 다운로드"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복</h1>
+    <h1>ROUND</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,7 +375,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">목차</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">문법</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">매개변수</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">반환 결과</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">실습 문제</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">선택지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">정답 및 해설</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -389,25 +394,83 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eda-study-power-bi-dax">
-<h1>EDA-Study와 함께하는 경영정보시각화능력 Power BI DAX 함수 완전 정복<a class="headerlink" href="#eda-study-power-bi-dax" title="Link to this heading">#</a></h1>
-<p>경영정보시각화능력 Power BI 실기를 준비하시는 분들을 위한 자료입니다.</p>
-<p>대한상공회의소에서 공개한 <a href="https://license.korcham.net/co/examguide02Sub.do?cd=0108&mm=28&num=3015481">DAX 함수 출제범위</a>에 포함되어 있는 111개의 DAX 함수를 완전 정복하는 것을 목표로 하는 콘텐츠입니다.</p>
-<p>순차적으로 111개의 자료들을 공개할 예정입니다.</p>
-<p>현재까지 공개된 자료 수: 4개</p>
-<p>경영정보시각화능력 Power BI 실기 시험 통과하시는데 도움되시길 바랍니다.</p>
-<p>제작: EDA-Study - <a class="reference external" href="https://www.youtube.com/&#64;EDA-gongbu">[유튜브 채널]</a> <a class="reference external" href="https://eda-study.com/">[홈페이지]</a></p>
-<section id="id1">
-<h2>목차<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">숫자/집계/통계 함수</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/abs.html">ABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/divide.html">DIVIDE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/int.html">INT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-agg-stats/round.html">ROUND</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="round">
+<h1>ROUND<a class="headerlink" href="#round" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>입력 받은 숫자를 지정된 자릿수에서 반올림 합니다.</p></li>
 </ul>
+<section id="id1">
+<h2>문법<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROUND</span><span class="p">(</span><span class="o">&lt;</span><span class="n">숫자</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">자릿수</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
 </div>
+</section>
+<section id="id2">
+<h2>매개변수<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>매개변수 명</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>숫자</p></td>
+<td><p>반올림 하고 싶은 숫자</p></td>
+</tr>
+<tr class="row-odd"><td><p>자릿수</p></td>
+<td><p>0이거나 양수인 경우 소수점 <code class="docutils literal notranslate"><span class="pre">자릿수</span> <span class="pre">+</span> <span class="pre">1</span></code>째 자리에서 반올림, 음수인 경우 정수 |<code class="docutils literal notranslate"><span class="pre">자릿수</span></code>|째 자리에서 반올림</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id3">
+<h2>반환 결과<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>반올림된 결과(소수; decimal)</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>실습 문제<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>아래 조건으로 <code class="docutils literal notranslate"><span class="pre">&lt;날씨&gt;</span></code> 테이블에 새 열(계산된 열)을 추가하시오.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>새 열 이름: <code class="docutils literal notranslate"><span class="pre">[반올림_평균기온]</span></code></p></li>
+<li><p>활용 필드: <code class="docutils literal notranslate"><span class="pre">&lt;날씨&gt;</span></code> 테이블의 <code class="docutils literal notranslate"><span class="pre">[평균기온]</span></code> 필드</p></li>
+<li><p>새 열 설명: 행별 <code class="docutils literal notranslate"><span class="pre">[평균기온]</span></code>을 소수점 둘째 자리에서 반올림한 값 (ex. 24.189 -&gt; 24.2)</p></li>
+<li><p>사용 함수: <code class="docutils literal notranslate"><span class="pre">ROUND</span></code></p></li>
+</ul>
+<section id="id5">
+<h3>선택지<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>A.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">반올림_평균기온</span> <span class="o">=</span> <span class="n">ROUND</span><span class="p">(</span><span class="s1">&#39;날씨&#39;</span><span class="p">[</span><span class="n">평균기온</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>B.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">반올림_평균기온</span> <span class="o">=</span> <span class="n">ROUND</span><span class="p">(</span><span class="s1">&#39;날씨&#39;</span><span class="p">[</span><span class="n">평균기온</span><span class="p">],</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>C.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">반올림_평균기온</span> <span class="o">=</span> <span class="n">ROUND</span><span class="p">(</span><span class="s1">&#39;날씨&#39;</span><span class="p">[</span><span class="n">평균기온</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>D.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">반올림_평균기온</span> <span class="o">=</span> <span class="n">ROUND</span><span class="p">(</span><span class="s1">&#39;날씨&#39;</span><span class="p">[</span><span class="n">평균기온</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>정답 및 해설<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">클릭해서 정답 및 해설을 확인해보세요.</p>
+<p>정답: D</p>
+<p>A. 소수점 셋째 자리에서 반올림. 24.189인 경우 24.19가 반환됨. 그러므로 오답</p>
+<p>B. 정수 둘째 자리에서 반올림. 24.189인 경우 0이 반환됨. 그러므로 오답.</p>
+<p>C. 정수 첫째 자리에서 반올림. 24.189인 경우 20이 반환됨. 그러므로 오답.</p>
+<p>D. 소수점 둘째 자리에서 반올림. 24.189인 경우 24.2이 반환됨. 그러므로 정답.</p>
+</div>
+</section>
 </section>
 </section>
 
@@ -424,7 +487,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./."
+            path: "./math-agg-stats"
         },
         predefinedOutput: true
     }
@@ -441,14 +504,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="math-agg-stats/abs.html"
-       title="next page">
+    <a class="left-prev"
+       href="int.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">ABS</p>
+        <p class="prev-next-subtitle">이전</p>
+        <p class="prev-next-title">INT</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -466,7 +529,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">목차</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">문법</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">매개변수</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">반환 결과</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">실습 문제</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">선택지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">정답 및 해설</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -507,8 +577,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
